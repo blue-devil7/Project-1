@@ -16,98 +16,70 @@ html {
 
 /* footer section */
 
-footer {
-    width: 80vw;
-    margin: 0 auto;
-    padding: 3rem;
 
+footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    width: 80vw;
+    height: 90px;
+    margin: 0 auto;
 }
 
-.menu-links {
+.box-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+
+.nav-links {
     display: flex;
     gap: 20px;
 }
-.box-left {
-    width: 50%;
-    display: flex;
-    align-items: flex-start;
-    gap: 5rem;
-}
 
-.logo {
-    font-size: 2.5rem;
-    font-weight: 900;
-    color: white;
-}
-
-.menu {
+.nav-link {
     list-style: none;
-    margin-top: 10px;
+    position: relative;
+}
+
+.nav-link p {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 600;
 }
 
 .menu-title {
     display: flex;
+    align-items: center;
     gap: 5px;
 }
 
-.menu-title a {
-    text-decoration: none;
-    font-size: 1.2rem;
-    color: white;
-    position: relative;
-}
-
-
 .menu-title i {
     color: white;
-    align-self: center;
+    font-size: 13px;
 }
 
-.menu:hover .menu-title i {
-    transform: rotate(180deg);
-}
-
-.dropdown-menu {
+.dropdown {
     position: absolute;
-
-    margin: 0 30px 0;
-    padding: 0;
-
+    box-sizing: border-box;
+    list-style: none;
     display: none;
+
+    margin-left: 5.5rem;
 }
 
-.menu:hover .dropdown-menu {
+.dropdown li {
+    font-size: 1.4rem;
+    color: white;
+}
+
+.nav-link:hover .dropdown {
     display: block;
 }
 
-.dropdown-menu li {
-    list-style: none;
-    color: white;
-    font-size: 1rem;
-}
 
-.buttons button {
-    padding: 0.8rem 1.2rem;
-    border: none;
-    border-radius: 12px;
-}
-
-.login {
-    background: none;
-    color: white;
-    font-size: 1.2rem;
-    font-weight: 600;
-}
-
-.signup {
-    background-color: white;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: hsl(356, 100%, 66%);
-}
 /* hero__Section */
 
 .hero_sec {
