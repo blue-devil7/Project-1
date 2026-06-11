@@ -3,9 +3,14 @@
     padding: 0;
 }
 
+body {
+    position: relative;
+}
+
 :root {
     --font-color: white;
     --bg-color: hsl(356, 100%, 66%);
+    --menu-color: rgb(40, 38, 38);
 }
 
 html {
@@ -17,19 +22,26 @@ html {
 
     min-height: 100vh;
     min-width: 100vw;
+    position: absolute;
 }
 
 /* footer section */
 
 footer {
     display: flex;
-    background-color: gray;
     align-items: center;
     width: 80vw;
     height: 90px;
-    margin: 20px auto;
+    margin: 0 auto;
 
     justify-content: space-between;
+}
+
+.box-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15%;
 }
 
 .logo p {
@@ -40,6 +52,8 @@ footer {
 
 .menu-lists {
     list-style: none;
+    display: flex;
+    gap: 15%;
 }
 
 .menu {
@@ -169,12 +183,145 @@ footer {
 
 /* mobile menu design  */
 
-@media (max-width: 750px) {
+@media (max-width: 550px) {
+
+    /* learn position context */
+
     footer {
         display: flex;
         flex-direction: column;
-        width: 90vw;
+        width: 90%;
+        height: 75%;
+
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        border-radius: 22px;
+
+        background-color: white;
+    }
+
+    .logo {
+        position: absolute;
+        top: -12%;
+        left: 2%;
+    }
+
+    .logo p {
+        font-size: 5rem;
+    }
+
+    .menu-lists {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin: 25px;
+        height: 60%;
+
+        position: relative;
+    }
+
+    .menu:hover .menu-title {
+        margin-bottom: 25px;
+    }
+
+    .menu-title p {
+        font-size: 2.5rem;
+        color: var(--menu-color);
+        font-size: 3.5rem;
+    }
+
+    .menu-title i {
+        color: var(--menu-color);
+        font-size: 3.5rem;
+    }
+
+
+    .dropdown {
+        display: none;
+        position: relative;
+        top: 0;
+        left: 5%;
+
+        font-size: 1.8rem;
+        color: var(--menu-color);
+        font-size: 3rem;
+    }
+
+    .ci-btn {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        margin: 35px;
+
+        width: 40%;
+
+
+    }
+
+    .login {
+        margin: 0;
+        padding: 1rem 2rem;
+        font-size: 3rem;
+        color: var(--menu-color);
+    }
+
+    .signin {
+        margin: 0;
+        padding: 2rem 2.5rem;
+        font-size: 3rem;
+        background-color: var(--bg-color);
+        color: white;
+    }
+
+    .line {
+        width: 80%;
+        height: 1px;
+        background-color: gray;
         margin: 0 auto;
 
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 35%;
+
+    }
+
+    /* hero section */
+
+    html {
+        font-size: 40%;
+    }
+
+    .hero_sec {
+        width: 80%;
+        margin-top: 80%;
+    }
+
+    .hero_sec h1 {
+        align-self: center;
+        text-align: center;
+    }
+
+    .hero_sec p {
+        width: 80%;
+        font-size: 250%;
+        text-align: center;
+    }
+
+    .ctn-btn {
+        margin-top: 1%;
+    }
+
+    .btn1 {
+        padding: 1.5rem 2.5rem;
+        font-size: 200%;
+    }
+
+    .btn2 {
+        padding: 1.5rem 2.5rem;
+        font-size: 200%;
     }
 }
